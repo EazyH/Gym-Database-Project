@@ -1,0 +1,57 @@
+ALTER VIEW "DBA"."SaleOblegane" AS  SELECT
+/*  
+    Widok, który pokazuje 3 najbardziej oblegane sale (ID sali)
+    pod wzglêdem zajêæ oraz liczbê zajêæ które siê w nich odbywaj¹.
+    Dla wybranych sal wyœwietlane s¹ kluby (ID klubu, miejscowoœæ, ulica, lokal)
+    wraz z ogóln¹ liczb¹ zajêæ jakie siê w tym klubie odbywaj¹.
+*/
+    POM1.ID_SALI,
+    POM1.LICZBA_ZAJEC,
+    KLUB.ID_KLUBU,
+    KLUB.MIEJSCOWOSC,
+    KLUB.ULICA,
+    KLUB.NR_LOKALU,
+    POM3.LACZNIE_ZAJEC  
+FROM
+    KLUB   
+LEFT JOIN
+    SALA 
+        ON KLUB.ID_KLUBU = SALA.ID_KLUBU   
+RIGHT JOIN
+    (
+        SELECT
+            TOP 3 SALA.ID_SALI,
+            COUNT(TYP_ZAJECIA.NAZWA_TYPUZ) AS "LICZBA_ZAJEC"   
+        FROM
+            SALA 
+        RIGHT JOIN
+            ZAJECIE 
+                ON SALA.ID_SALI = ZAJECIE.ID_SALI   
+        LEFT JOIN
+            TYP_ZAJECIA 
+                ON ZAJECIE.ID_TYPUZ = TYP_ZAJECIA.ID_TYPUZ   
+        GROUP BY
+            SALA.ID_SALI   
+        ORDER BY
+            2 DESC
+    ) AS "POM1" 
+        ON SALA.ID_SALI = POM1.ID_SALI    
+LEFT JOIN
+    (
+        SELECT
+            KLUB.ID_KLUBU,
+            COUNT(ZAJECIE.ID_ZAJECIA) AS "LACZNIE_ZAJEC"  
+        FROM
+            KLUB 
+        LEFT JOIN
+            SALA 
+                ON KLUB.ID_KLUBU = SALA.ID_KLUBU  
+        RIGHT JOIN
+            ZAJECIE 
+                ON SALA.ID_SALI = ZAJECIE.ID_SALI  
+        GROUP BY
+            KLUB.ID_KLUBU
+    ) AS "POM3" 
+        ON KLUB.ID_KLUBU = POM3.ID_KLUBU  
+ORDER BY
+    POM1.LICZBA_ZAJEC DESC

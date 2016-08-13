@@ -1,0 +1,139 @@
+ALTER PROCEDURE "DBA"."DodajUmowe" (@peselP  CHAR(11), 
+                                    @nazwau2 VARCHAR(30), 
+                                    @dlugosc INTEGER) 
+AS 
+  BEGIN 
+      DECLARE @czyprawidlowyP BIT 
+
+      SET @czyprawidlowyP = Sprawdzpesel(@peselP) 
+
+      IF @czyprawidlowyP = 0 
+          OR NOT EXISTS(SELECT pracownik.pesel 
+                        FROM   pracownik 
+                        WHERE  pracownik.pesel = @peselP) 
+        BEGIN 
+            PRINT 'BLAD: ZLY PESEL LUB PESEL PRACOWNIKA NIE ISTNIEJE' 
+
+            RETURN 1 
+        END 
+
+      IF @dlugosc > 12 
+        BEGIN 
+            PRINT 'BLAD: ZBYT DLUGI OKRES TRWANIA UMOWY' 
+
+            RETURN 1 
+        END 
+
+      IF NOT EXISTS(SELECT typ_umowy.typ_umowy 
+                    FROM   typ_umowy 
+                    WHERE  typ_umowy.typ_umowy = @nazwau2) 
+        BEGIN 
+            PRINT 'BLAD: BRAK PODANEGO TYPU UMOWY' 
+
+            RETURN 1 
+        END 
+
+      DECLARE @idtypu INTEGER 
+      DECLARE @nazwau VARCHAR(30) 
+      DECLARE mojkursor1 CURSOR FOR 
+        SELECT id_typuu, 
+               typ_umowy 
+        FROM   typ_umowy 
+
+      OPEN mojkursor1 
+
+      FETCH mojkursor1 INTO @idtypu, @nazwau 
+
+      WHILE @@FETCH_STATUS = 0 
+        BEGIN 
+            IF @nazwau = @nazwau2 
+              BREAK 
+
+            FETCH mojkursor1 INTO @idtypu, @nazwau 
+        END 
+
+      PRINT 'ID TYPU UMOWY: %1!', @idtypu 
+
+      CLOSE mojkursor1 
+
+      DEALLOCATE mojkursor1 
+
+      DECLARE @pesel CHAR(11) 
+      DECLARE @idstan INTEGER 
+      DECLARE mojkursor2 CURSOR FOR 
+        SELECT pracownik.pesel, 
+               stanowisko.id_stanowiska 
+        FROM   pracownik 
+               LEFT JOIN stanowisko 
+                      ON pracownik.id_stanowiska = stanowisko.id_stanowiska 
+        ORDER  BY 2 DESC 
+
+      OPEN mojkursor2 
+
+      FETCH mojkursor2 INTO @pesel, @idstan 
+
+      WHILE @@FETCH_STATUS = 0 
+        BEGIN 
+            IF @pesel = @peselP 
+              BREAK 
+
+            FETCH mojkursor2 INTO @pesel, @idstan 
+        END 
+
+      CLOSE mojkursor2 
+
+      DEALLOCATE mojkursor2 
+
+      PRINT 'ID STANOWISKA: %1!', @idstan 
+
+      DECLARE @lp INTEGER 
+
+      SET @lp = (SELECT Max(umowa.id_umowy) 
+                 FROM   umowa) 
+                + 1 
+
+      DECLARE @i INTEGER 
+
+      SET @i = 1 
+
+      DECLARE @idum INTEGER 
+      DECLARE mojkursor3 CURSOR FOR 
+        SELECT umowa.id_umowy 
+        FROM   umowa 
+        ORDER  BY umowa.id_umowy ASC 
+
+      OPEN mojkursor3 
+
+      FETCH mojkursor3 INTO @idum 
+
+      WHILE @@FETCH_STATUS = 0 
+        BEGIN 
+            IF @idum <> @i 
+              BREAK 
+
+            FETCH mojkursor3 INTO @idum 
+
+            SET @i = @i + 1 
+        END 
+
+      CLOSE mojkursor3 
+
+      DEALLOCATE mojkursor3 
+
+      PRINT 'ID UMOWY: %1!', @i 
+
+      BEGIN TRANSACTION 
+
+      INSERT INTO umowa 
+      VALUES      (@idtypu, 
+                   @i, 
+                   1, 
+                   @idstan, 
+                   @peselP, 
+                   Date(Now()), 
+                   Date(Dateadd(month, @dlugosc, Date(Now())))) 
+
+      COMMIT TRANSACTION 
+
+      RETURN 0 
+  END

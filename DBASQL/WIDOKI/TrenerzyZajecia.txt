@@ -1,0 +1,39 @@
+ALTER VIEW "DBA"."TrenerzyZajecia" AS  SELECT
+/*  Widok, który pokazuje liczbê wszystkich zajêæ 
+    trenerów fitness (PESEL, Imiê, Nazwisko, Stanowisko),
+    je¿eli maj¹ ich wiêcej ni¿ 2. Dla wybranych trenerów
+    wyœwietla klub (ID klubu), w którym pracuj¹.
+*/
+    KLUB.ID_KLUBU,
+    PRACOWNIK.PESEL,
+    PRACOWNIK.IMIE,
+    PRACOWNIK.NAZWISKO,
+    STANOWISKO.NAZWA_STANOWISKA,
+    POMOC.LICZBA_ZAJEC  
+FROM
+    PRACOWNIK 
+LEFT JOIN
+    KLUB 
+        ON PRACOWNIK.ID_KLUBU = KLUB.ID_KLUBU  
+LEFT JOIN
+    STANOWISKO 
+        ON PRACOWNIK.ID_STANOWISKA = STANOWISKO.ID_STANOWISKA  
+INNER JOIN
+    (
+        SELECT
+            PRACOWNIK.PESEL,
+            COUNT(ZAJECIE.PESEL) AS "LICZBA_ZAJEC"  
+        FROM
+            PRACOWNIK 
+        LEFT JOIN
+            ZAJECIE 
+                ON PRACOWNIK.PESEL = ZAJECIE.PESEL  
+        GROUP BY
+            PRACOWNIK.PESEL
+    ) AS "POMOC" 
+        ON PRACOWNIK.PESEL = POMOC.PESEL  
+WHERE
+    STANOWISKO.NAZWA_STANOWISKA = 'Instruktor fitness' 
+   // AND POMOC.LICZBA_ZAJEC >= 2  
+ORDER BY
+    KLUB.ID_KLUBU ASC

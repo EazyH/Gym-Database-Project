@@ -1,0 +1,11 @@
+insert into TYP_UMOWY
+values(1, 'Normalna')
+
+insert into TYP_UMOWY
+values(2, 'Studencka')
+
+insert into TYP_UMOWY
+values(3, 'Seniorska')
+
+insert into TYP_UMOWY
+values(4, 'Rodzinna')

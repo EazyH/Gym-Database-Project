@@ -1,0 +1,20 @@
+insert into STANOWISKO
+values(1, 'Recepcja')
+
+insert into STANOWISKO
+values(2, 'Manager')
+
+insert into STANOWISKO
+values(3, 'Instruktor si³owni')
+
+insert into STANOWISKO
+values(4, 'Instruktor fitness')
+
+insert into STANOWISKO
+values(5, 'Konserwator')
+
+insert into STANOWISKO
+values(6, 'Konsultant telefoniczny')
+
+insert into STANOWISKO
+values(7, 'Doradca klienta')

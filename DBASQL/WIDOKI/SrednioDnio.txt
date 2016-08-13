@@ -1,0 +1,53 @@
+ALTER VIEW "DBA"."LiczbaDniUmowy"
+/*
+   Widok, który pokazuje dane osób (PESEL, Imiê, Nazwisko),
+   które podpisa³y umowê typu "Normalna" lub "Seniorska".
+   Dla wybranych osób pokazuje czas (dni) na jaki umowa
+   zosta³a zawarta. Dodatkowo klub (ID klubu), 
+   w którym umowa danej osoby zosta³a podpisana oraz œredni
+   czas na jaki podpisywane s¹ zwykle umowy w tym klubie. 
+*/
+   AS  SELECT
+    KLIENT.PESEL,
+    KLIENT.IMIE,
+    KLIENT.NAZWISKO,
+    PRACOWNIK.ID_KLUBU,
+    TYP_UMOWY.TYP_UMOWY ,
+    DATEDIFF(day,
+    UMOWA.DATA_PODPISANIA,
+    UMOWA.DATA_ZAKONCZENIA) AS "LICZBA_DNI",
+    POMOC.SREDNIO_DNI  
+FROM
+    KLIENT 
+INNER JOIN
+    UMOWA 
+        ON KLIENT.ID_UMOWY = UMOWA.ID_UMOWY  
+LEFT JOIN
+    PRACOWNIK 
+        ON UMOWA.PESEL = PRACOWNIK.PESEL  
+LEFT JOIN
+    TYP_UMOWY 
+        ON UMOWA.ID_TYPUU = TYP_UMOWY.ID_TYPUU  
+LEFT JOIN
+    (
+        SELECT
+            PRACOWNIK.ID_KLUBU,
+            CONVERT(INTEGER,
+            ROUND(AVG(DATEDIFF(day,
+            UMOWA.DATA_PODPISANIA,
+            UMOWA.DATA_ZAKONCZENIA)),
+            0)) AS "SREDNIO_DNI"  
+        FROM
+            UMOWA 
+        LEFT JOIN
+            PRACOWNIK 
+                ON UMOWA.PESEL = PRACOWNIK.PESEL  
+        GROUP BY
+            PRACOWNIK.ID_KLUBU
+    ) AS "POMOC" 
+        ON PRACOWNIK.ID_KLUBU = POMOC.ID_KLUBU  
+WHERE
+    TYP_UMOWY = 'Normalna' 
+    OR TYP_UMOWY = 'Seniorska'
+ORDER BY
+    LICZBA_DNI ASC

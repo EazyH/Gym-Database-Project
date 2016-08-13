@@ -1,0 +1,26 @@
+insert into TYP_ZAJECIA
+values(1, 'Power Bike')
+
+insert into TYP_ZAJECIA
+values(2, 'Jumping fitness')
+
+insert into TYP_ZAJECIA
+values(3, 'Taniec')
+
+insert into TYP_ZAJECIA
+values(4, 'Crossfit')
+
+insert into TYP_ZAJECIA
+values(5, 'Boks')
+
+insert into TYP_ZAJECIA
+values(6, 'Zumba')
+
+insert into TYP_ZAJECIA
+values(7, 'Pilates')
+
+insert into TYP_ZAJECIA
+values(8, 'Joga')
+
+insert into TYP_ZAJECIA
+values(9, 'Tabata')

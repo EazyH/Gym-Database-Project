@@ -1,0 +1,24 @@
+ALTER VIEW "DBA"."PodpisaneUmowy"  AS   SELECT
+/*  Widok, który pokazuje liczbê wszystkich podpisanych umów
+    przez dany klub.
+*/
+    KLUB.ID_KLUBU,
+    KLUB.MIEJSCOWOSC,
+    KLUB.ULICA,
+    KLUB.NR_LOKALU,
+    COUNT() AS "PODPISANE_UMOWY"  
+FROM
+    KLUB 
+LEFT JOIN
+    PRACOWNIK 
+        ON KLUB.ID_KLUBU = PRACOWNIK.ID_KLUBU  
+RIGHT JOIN
+    UMOWA 
+        ON PRACOWNIK.PESEL = UMOWA.PESEL  
+GROUP BY
+    KLUB.ID_KLUBU,
+    KLUB.MIEJSCOWOSC,
+    KLUB.ULICA,
+    KLUB.NR_LOKALU  
+ORDER BY
+    PODPISANE_UMOWY DESC

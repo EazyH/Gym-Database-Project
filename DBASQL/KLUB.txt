@@ -1,0 +1,14 @@
+INSERT INTO KLUB
+VALUES(1, 1, '12-320', 'Warszawa', 'Mazowiecka', '120', 'Mazowieckie', '543454222', '1200', '2015-06-23')
+
+INSERT INTO KLUB
+VALUES(2, 1, '11-543', 'Warszawa', 'Górczewska', '48', 'Mazowieckie', '546789767', '1100', '2015-08-12')
+
+INSERT INTO KLUB
+VALUES(3, 1, '56-120', 'Poznañ', 'Straszna', '12', 'Wielkopolskie', '765454122', '960', '2015-11-20')
+
+INSERT INTO KLUB
+VALUES(4, 1, '45-112', 'Kraków', 'Szeroka', '67', 'Ma³opolskie', '654789090', '840', '2015-12-02')
+
+INSERT INTO KLUB
+VALUES(5, 1, '12-202', 'Kraków', 'Ma³eckich', '122', 'Ma³opolskie', '767888990', '1400', '2015-12-21')

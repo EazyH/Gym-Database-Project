@@ -1,0 +1,203 @@
+insert into SPRZET
+VALUES('344FDE423A', 1, 'Rowerek stacjonarny', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE423E', 1, 'Orbitrek', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE423F', 1, 'Bie¿nia stacjonarna', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE423G', 2, 'Rowerek stacjonarny', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE423H', 2, 'Rowerek stacjonarny', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE423I', 3, 'Rowerek stacjonarny', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE423J', 3, 'Ergometr', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE423K', 4, 'Stepper', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE423L', 5, 'Stepper', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE423Z', 6, 'Stepper', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE423X', 7, 'Orbitrek', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE423C', 8, 'Orbitrek', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE423V', 8, 'Orbitrek', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE423B', 9, 'Bie¿nia stacjonarna', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE423N', 9, 'Powerbike', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE423M', 10, 'Powerbike', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE423Q', 11, 'Stepper', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('3441DE423A', 12, 'Rowerek stacjonarny', '2016-02-23', '2016-09-29')
+
+insert into SPRZET
+VALUES('344RDE423E', 13, 'Orbitrek', '2016-02-23', '2016-08-13')
+
+insert into SPRZET
+VALUES('344TDE423F', 14, 'Bie¿nia stacjonarna', '2016-03-23', '2016-08-28')
+
+insert into SPRZET
+VALUES('344QDE423G', 15, 'Rowerek stacjonarny', '2016-03-23', '2016-08-28')
+
+insert into SPRZET
+VALUES('344WDE423H', 15, 'Rowerek stacjonarny', '2016-03-23', '2016-09-28')
+
+insert into SPRZET
+VALUES('344FDG423I', 16, 'Rowerek stacjonarny', '2016-04-23', '2016-08-28')
+
+insert into SPRZET
+VALUES('344FDN423J', 17, 'Ergometr', '2016-06-23', '2016-07-22')
+
+insert into SPRZET
+VALUES('344FDNBF3K', 18, 'Stepper', '2016-06-23', '2016-07-22')
+
+insert into SPRZET
+VALUES('34ZXCJ423L', 19, 'Stepper', '2016-06-23', '2016-07-22')
+
+insert into SPRZET
+VALUES('344TFV423Z', 20, 'Stepper', '2016-06-23', '2016-08-23')
+
+insert into SPRZET
+VALUES('3123DE423X', 20, 'Orbitrek', '2016-04-23', '2016-05-23')
+
+insert into SPRZET
+VALUES('342F45323C', 21, 'Orbitrek', '2016-03-23', '2016-05-23')
+
+insert into SPRZET
+VALUES('343456F23V', 22, 'Orbitrek', '2016-01-23', '2016-05-23')
+
+insert into SPRZET
+VALUES('34G5E423B', 23, 'Bie¿nia stacjonarna', '2016-08-23', '2016-09-10')
+
+insert into SPRZET
+VALUES('346076423N', 24, 'Powerbike', '2016-01-23', '2016-07-09')
+
+insert into SPRZET
+VALUES('347087423M', 25, 'Powerbike', '2016-01-23', '2016-07-09')
+
+insert into SPRZET
+VALUES('348045423Q', 26, 'Stepper', '2016-10-23', '2016-10-15')
+
+insert into SPRZET
+VALUES('34000E423A', 27, 'Rowerek stacjonarny', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('34011E423E', 27, 'Orbitrek', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('34088E423F', 27, 'Bie¿nia stacjonarna', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344054423G', 28, 'Rowerek stacjonarny', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('34087E423H', 28, 'Rowerek stacjonarny', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FD0703I', 28, 'Rowerek stacjonarny', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344F00723J', 29, 'Ergometr', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344F09023K', 29, 'Stepper', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE4098', 29, 'Stepper', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE4987', 29, 'Stepper', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE4678', 29, 'Orbitrek', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FDE355C', 30, 'Orbitrek', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FD1113V', 30, 'Orbitrek', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('344FD4323B', 30, 'Bie¿nia stacjonarna', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('34QWEE423N', 30, 'Powerbike', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('34TYP423M', 30, 'Powerbike', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('34QWEE423Q', 30, 'Stepper', '2016-01-23', '2016-01-23')
+
+insert into SPRZET
+VALUES('34EERE423A', 31, 'Rowerek stacjonarny', '2016-02-23', '2016-09-29')
+
+insert into SPRZET
+VALUES('34RTYE423E', 31, 'Orbitrek', '2016-02-23', '2016-08-13')
+
+insert into SPRZET
+VALUES('344TLHJ23F', 31, 'Bie¿nia stacjonarna', '2016-03-23', '2016-08-28')
+
+insert into SPRZET
+VALUES('3BBVDE423G', 31, 'Rowerek stacjonarny', '2016-03-23', '2016-08-28')
+
+insert into SPRZET
+VALUES('3QQQDE423H', 31, 'Rowerek stacjonarny', '2016-03-23', '2016-09-28')
+
+insert into SPRZET
+VALUES('344FDTTR3I', 31, 'Rowerek stacjonarny', '2016-04-23', '2016-08-28')
+
+insert into SPRZET
+VALUES('3LKIDN423J', 31, 'Ergometr', '2016-06-23', '2016-07-22')
+
+insert into SPRZET
+VALUES('34YTNG423K', 31, 'Stepper', '2016-06-23', '2016-07-22')
+
+insert into SPRZET
+VALUES('3ERFDJ423L', 31, 'Stepper', '2016-06-23', '2016-07-22')
+
+insert into SPRZET
+VALUES('344FDSGERZ', 32, 'Stepper', '2016-06-23', '2016-08-23')
+
+insert into SPRZET
+VALUES('341FDEOP3X', 32, 'Orbitrek', '2016-04-23', '2016-05-23')
+
+insert into SPRZET
+VALUES('3JHYDE423C', 32, 'Orbitrek', '2016-03-23', '2016-05-23')
+
+insert into SPRZET
+VALUES('343FKWQ23V', 32, 'Orbitrek', '2016-01-23', '2016-05-23')
+
+insert into SPRZET
+VALUES('345FDEGTFB', 32, 'Bie¿nia stacjonarna', '2016-08-23', '2016-09-10')
+
+insert into SPRZET
+VALUES('346F87623N', 32, 'Powerbike', '2016-01-23', '2016-07-09')
+
+insert into SPRZET
+VALUES('154FDE423M', 32, 'Powerbike', '2016-01-23', '2016-07-09')
+
+insert into SPRZET
+VALUES('348FD4653Q', 32, 'Stepper', '2016-10-23', '2016-10-15')

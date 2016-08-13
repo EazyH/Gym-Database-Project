@@ -1,0 +1,17 @@
+insert into WEJSCIE_PROBNE
+values('96061514352', 1, 'Bogus³aw', 'Linda', '1996-06-15', 'M', '2016-03-05')
+
+insert into WEJSCIE_PROBNE
+values('96022312979', 1, 'Adrian', 'Panawo', '1996-02-23', 'M', '2016-04-06')
+
+insert into WEJSCIE_PROBNE
+values('51092406539', 1, 'Euzebiusz', 'Ko³odziej', '1951-09-24', 'M', '2016-05-01')
+
+insert into WEJSCIE_PROBNE
+values('70110504433', 1, 'Miros³aw', 'Go³y', '1970-11-05', 'M', '2016-06-08')
+
+insert into WEJSCIE_PROBNE
+values('86061003767', 1, 'Agata', 'Sztabka', '1986-06-10', 'K', '2016-06-09')
+
+insert into WEJSCIE_PROBNE
+values('71011913863', 1, 'Agnieszka', 'Czy¿', '1971-01-19', 'K', '2016-06-11')

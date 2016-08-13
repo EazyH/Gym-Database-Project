@@ -1,0 +1,95 @@
+insert into SALA
+values(1, 1, 03)
+
+insert into SALA
+values(2, 1, 06)
+
+insert into SALA
+values(3, 1, 24)
+
+insert into SALA
+values(4, 1, 44)
+
+insert into SALA
+values(5, 1, 04)
+
+insert into SALA
+values(6, 1, 15)
+
+insert into SALA
+values(7, 2, 16)
+
+insert into SALA
+values(8, 2, 14)
+
+insert into SALA
+values(9, 2, 55)
+
+insert into SALA
+values(10, 2, 01)
+
+insert into SALA
+values(11, 2, 04)
+
+insert into SALA
+values(12, 2, 23)
+
+insert into SALA
+values(13, 3, 16)
+
+insert into SALA
+values(14, 3, 26)
+
+insert into SALA
+values(15, 3, 33)
+
+insert into SALA
+values(16, 3, 09)
+
+insert into SALA
+values(17, 3, 22)
+
+insert into SALA
+values(18, 3, 76)
+
+insert into SALA
+values(19, 3, 47)
+
+insert into SALA
+values(20, 4, 73)
+
+insert into SALA
+values(21, 4, 87)
+
+insert into SALA
+values(22, 4, 98)
+
+insert into SALA
+values(23, 4, 99)
+
+insert into SALA
+values(24, 4, 81)
+
+insert into SALA
+values(25, 4, 15)
+
+insert into SALA
+values(26, 4, 51)
+
+insert into SALA
+values(27, 4, 90)
+
+insert into SALA
+values(28, 5, 65)
+
+insert into SALA
+values(29, 5, 66)
+
+insert into SALA
+values(30, 5, 67)
+
+insert into SALA
+values(31, 5, 09)
+
+insert into SALA
+values(32, 5, 12)

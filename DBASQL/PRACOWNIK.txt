@@ -1,0 +1,44 @@
+insert into PRACOWNIK
+values(1, '83012810179', 1, '10-300', 'Warszawa', 'D¹browskiego', '12/45', 'Mazowieckie', '545322111', 'Lucjan', 'Nowak', '1983-01-28', 'M')
+
+insert into PRACOWNIK
+values(4, '83112909854', 1, '22-343', 'Warszawa', 'Krótka', '43/44', 'Mazowieckie', '654789765', 'Adrian', 'Szmal', '1983-11-29', 'M')
+
+insert into PRACOWNIK
+values(7, '51120716173', 1, '11-765', 'Warszawa', 'Szara', '15/42', 'Mazowieckie', '545676789', 'Tomasz', 'Szybka', '1951-12-07', 'M')
+
+insert into PRACOWNIK
+values(2, '51020915111', 2, '55-311', 'Warszawa', 'W¹sowicza', '12/23', 'Mazowieckie', '543322888', 'Pawe³', 'Œwierk', '1951-02-09', 'M')
+
+insert into PRACOWNIK
+values(4, '51070215971', 2, '77-222', 'Warszawa', 'Amarantowa', '35/64', 'Mazowieckie', '788322876', 'Piotr', 'Abacki', '1951-07-02', 'M')
+
+insert into PRACOWNIK
+values(7, '70052515238', 2, '55-552', 'Warszawa', 'Programowa', '14A/33', 'Mazowieckie', '511322986', 'Lech', 'Druciak', '1970-05-25', 'M')
+
+insert into PRACOWNIK
+values(4, '86083002469', 3, '11-322', 'Poznañ', 'Odessy', '11/43', 'Wielkopolskie', '787676556', 'Monika', 'Szata', '1986-08-30', 'K')
+
+insert into PRACOWNIK
+values(5, '86092718988', 3, '24-654', 'Poznañ', 'Homera', '55/77', 'Wielkopolskie', '555676878', 'Ewelina', 'Wilk', '1986-09-27', 'K')
+
+insert into PRACOWNIK
+values(7, '71102213469', 3, '16-765', 'Poznañ', 'Mickiewicza', '55/66', 'Wielkopolskie', '656544343', 'Tamara', 'Szczota', '1971-10-22', 'K')
+
+insert into PRACOWNIK
+values(4, '71092505243', 4, '54-322', 'Kraków', 'Hoffa', '32/54', 'Ma³opolskie', '555322222', 'Marta', 'Puchacz', '1971-09-25', 'K')
+
+insert into PRACOWNIK
+values(6, '54031119844', 4, '53-998', 'Kraków', 'Burakowa', '54/124', 'Ma³opolskie', '665322888', 'Martyna', 'Odlew', '1954-03-11', 'K')
+
+insert into PRACOWNIK
+values(7, '54092008107', 4, '12-809', 'Kraków', 'Odwa¿na', '121/212', 'Ma³opolskie', '765322888', 'Agata', 'Sosna', '1954-09-20', 'K')
+
+insert into PRACOWNIK
+values(4, '54072313746', 5, '44-233', 'Kraków', 'Krêta', '35/77', 'Ma³opolskie', '786322876', 'Renata', 'Œwider', '1954-07-23', 'K')
+
+insert into PRACOWNIK
+values(4, '48122201123', 5, '32-123', 'Kraków', 'Korsaka', '13A/43', 'Ma³opolskie', '545322986', 'Dorota', 'Michna', '1948-12-22', 'K')
+
+insert into PRACOWNIK
+values(7, '86111610460', 5, '34-544', 'Kraków', 'Kochanowskiego', '1/12', 'Ma³opolskie', '510322888', 'Dominika', 'Szczur', '1986-11-16', 'K')
